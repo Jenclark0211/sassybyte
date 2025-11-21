@@ -1,0 +1,405 @@
+:root {
+  --back:#020d14;
+  --text:#f4f4f6;
+  --neon:#086ef9;
+  --medblue:#0839d4;
+  --accent:#ff02a3;
+  --glow:#dbf5f7;
+  --textshadow:5px 5px 5px #ff02a3;
+}
+*, ::before, ::after {
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+.unkempt-regular {
+  font-family: "Unkempt", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.unkempt-bold {
+  font-family: "Unkempt", cursive;
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+.space-mono-regular {
+  font-family: "Space Mono", monospace;
+  font-weight: 600;
+  font-style: normal;
+  
+}
+.pt-sans-regular {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.pt-sans-bold {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.pt-sans-regular-italic {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.pt-sans-bold-italic {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.press-start-2p-regular {
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+.coda-regular {
+  font-family: "Coda", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+html {
+  
+  font-size:17px;
+  font-family:  font-family: "PT Sans", sans-serif;
+
+}
+body {
+   background-image:url('https://live.staticflickr.com/65535/54911264138_5625928420_h.jpg');
+  background-fit:cover;
+  border-left:
+  color:var(--text);
+}
+#container {
+  background-color:var(--back);
+}
+.header {
+  text=
+  background-color:(--medblue);
+  color:var(--neon);
+}
+.header  a {
+  text-decoration:none;
+  font-size:75px; 
+}
+#webpage a:hover {
+  transform:scale(1.5);
+}
+
+
+#webpage {
+  font-size:65px; 
+  font-family: "PT Sans", sans-serif;
+  font-weight: 3em;
+  font-style: italic;
+  margin-left:0;
+  text-align:center;
+  
+}
+
+h2 {
+  font-size:35px;
+  font-family: "PT Sans", sans-serif;
+  text-align:left;
+  margin-bottom:30px;
+  margin-left:25%;
+}
+h3 {
+    font-family: "PT Sans", sans-serif;
+  
+  font-size:28px;
+  margin-left:auto;
+  margin-bottom:10px; 
+}
+
+.shadow {
+   text-shadow:4px 6px 4px var(--accent), 2px 2px 5px var(--glow), 2px 3px 2px  var(--back);
+  transform: scale(2 );
+}
+#webpage {
+  font-size:60px;
+}
+code {
+  color:var(--accent);
+  text-shadow:2px 4px solid   var(--neon);
+  font-size:45px;
+}
+.spacer {
+   background-color:var(--back);
+  height:50px;
+  width:100%;
+}
+
+.mini {
+  font-size:18px;
+}
+#intro {
+  display:flex;
+  flex-direction:column;
+  flex-wrap:nowrap;
+  justify-content:center;
+  align-items:center;
+  backgound-color:var(--back);
+}
+#intro p {
+  font-size:30px;
+  color:var(--neon);  
+  text-align:center;
+
+}
+
+#intro img {
+  width:250px;
+  
+  }
+#showcase {
+ 
+  
+}
+
+
+
+.contact {
+  border:3px dashed Var(--neon);
+  outline:2px solid var(--accent);
+  color:var(--glow);
+  font-size:30px;
+  
+}
+.contact a {
+  color:var(--glow);
+  text-decoration:none;
+  
+}
+.showcase p {
+  font-size:30px;
+  color:var(--neon);
+  text-align:center;
+ 
+  
+}
+#navbar {
+  background-color: #0f0f1a;
+  padding: 1rem;
+  box-shadow: 0 0 20px #00f0ff;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.nav-menu li {
+  position: relative;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #00f0ff;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  display: block;
+  transition: all 0.3s ease;
+  text-shadow: 0 0 10px #00f0ff;
+}
+
+.nav-menu a:hover {
+  color: #fff;
+  background-color: #00f0ff;
+  text-shadow: none;
+  box-shadow: 0 0 10px #00f0ff;
+}
+
+.dropdown-menu,
+.sub-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #1a1a2e;
+  display: none;
+  flex-direction: column;
+  min-width: 150px;
+  box-shadow: 0 0 10px #00f0ff;
+  z-index: 1000;
+}
+
+.dropdown:hover .dropdown-menu,
+.submenu:hover .sub-dropdown {
+  display: flex;
+}
+
+.dropdown-menu li,
+.sub-dropdown li {
+  position: relative;
+}
+
+.sub-dropdown {
+  left: 100%;
+  top: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-menu {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 85%;
+  position: relative;
+  margin-left: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+  
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color:var(--medblue);
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 25%;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color:var(--glow);
+  font-size: 20px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align:left;
+  margin-top:50px;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color:var(--text);
+  background-color:var(--back);
+  
+  font-size: 12px;
+  font-weight:900;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+.calendar-container {
+  background: linear-gradient(145deg, #0b1e3f, #1a2b4f);
+  border: 2px solid #6a00ff;
+  border-radius: 16px;
+  padding: 30px;
+  max-width: 100%;
+  text-align: center;
+  box-shadow: 0 0 20px #6a00ff;
+  color: var(--glow);
+  font-family: 'Courier New', monospace;
+}
+
+#daySelector {
+  margin-bottom: 20px;
+  padding: 8px;
+  font-size: 1.2em;
+  font-weight:bold;
+  background-color:var(--neon);
+  color: var(--back);
+  border: 2px solid var(--accent);
+  border-radius: 6px;
+}
+
+#theme {
+  font-size: 1.5em;
+  color: #a366ff;
+}
+
+#caption {
+  font-size: 1em;
+  margin-top: 10px;
+}
+
+#mascotGif {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 300px;
+  border-radius: 8px;
+}
+
+/*For screens larger than 768px*/
+
+@media screen and min-width(> 768px)
+  }
