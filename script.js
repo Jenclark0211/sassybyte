@@ -1,53 +1,81 @@
-const calendar = {
+// Refined slogans for Sassy the Chinchilla
+const sassyWeek = {
   Sunday: {
-    theme: "Sunday Chill & Build",
-    caption: "Relax, recharge, and maybe refactor. Byte by byte, we build.",
-    gif: "sassy_sunday.gif"
+    theme: "Reset & Recharge",
+    caption: "Strategic rest fuels sharper execution. Reset today to lead stronger tomorrow.",
+    gif: "" // optional image URL
   },
   Monday: {
     theme: "Monday Motivation",
-    caption: "Mondays are for compiling confidence. Let’s code hard, sass harder.",
-    gif: "https://live.staticflickr.com/65535/54840194089_1d53b2fe56.jpg"
+    caption: "Confidence compiles faster than code. Begin bold, and the week will follow.",
+    gif: ""
   },
   Tuesday: {
-    theme: "Tuesday Debug Sass",
-    caption: "Dear bugs: consider yourselves evicted. 🐹💻 #DebuggingWithAttitude",
-    gif: "https://live.staticflickr.com/65535/54930267025_fed2e3560f_w.jpg"
+    theme: "Debug Day",
+    caption: "Every bug is a lesson in logic. Evict errors, elevate clarity.",
+    gif: ""
   },
   Wednesday: {
-    theme: "Wednesday Wisdom",
-    caption: "Indentation matters. So does attitude. #SassyTips",
-    gif: "https://live.staticflickr.com/65535/54929180687_4684c76c93_w.jpg5"
+    theme: "Wisdom Wednesday",
+    caption: "Indentation reflects discipline; precision reflects mindset. Structure matters in code and in thought.",
+    gif: ""
   },
   Thursday: {
-    theme: "Thursday Throwback",
-    caption: "Back in my byte-sized day, code was chunky and sass was eternal. #TBT",
-    gif: "sassy_thursday.gif"
+    theme: "Throwback Thursday",
+    caption: "Refactoring the past sharpens the future. Yesterday’s wins are today’s foundation.",
+    gif: ""
   },
   Friday: {
-    theme: "Friday Wins",
-    caption: "Code compiled, bugs squashed, sass delivered. Cheers to the weekend!",
-    gif: "sassy_friday.gif"
+    theme: "Feature Friday",
+    caption: "Innovation isn’t shipped—it’s launched. Deliver brilliance, not just commits.",
+    gif: ""
   },
   Saturday: {
-    theme: "Saturday Style",
-    caption: "Weekend mode: activated. Syntax optional, sass mandatory.",
-    gif: "sassy_saturday.gif"
+    theme: "Play & Polish",
+    caption: "Experimentation breeds mastery. Play with ideas, polish with intent.",
+    gif: ""
   }
 };
 
-function updateCalendar(day) {
-  const post = calendar[day];
-  document.getElementById("theme").textContent = post.theme;
-  document.getElementById("caption").textContent = post.caption;
-  document.getElementById("mascotGif").src = post.gif;
+
+const titleEl = document.getElementById("dayTitle");
+const themeEl = document.getElementById("dayTheme");
+const captionEl = document.getElementById("caption");
+const gifEl = document.getElementById("mascotGif");
+const selector = document.getElementById("daySelector");
+
+// Initialize to today if possible
+const todayName = new Intl.DateTimeFormat('en-US', { weekday: 'long' }).format(new Date());
+if (sassyWeek[todayName]) {
+  selector.value = todayName;
+} else {
+  selector.value = "Sunday";
 }
 
-document.getElementById("daySelector").addEventListener("change", (e) => {
-  updateCalendar(e.target.value);
+updateDay(selector.value);
+
+selector.addEventListener("change", (e) => {
+  updateDay(e.target.value);
 });
 
-// Load today's post on page load
-const today = new Date().toLocaleDateString("en-US", { weekday: "long" });
-document.getElementById("daySelector").value = today;
-updateCalendar(today);
+function updateDay(day) {
+  const data = sassyWeek[day];
+  titleEl.textContent = `${day} ${data.theme.includes(day) ? "" : ""}`.trim() || day;
+  themeEl.textContent = data.theme;
+  captionEl.textContent = data.caption;
+
+  // Handle optional image
+  if (data.gif && data.gif.length > 0) {
+    gifEl.src = data.gif;
+    gifEl.alt = `Sassy the Chinchilla — ${day}`;
+    gifEl.style.display = "inline-block";
+  } else {
+    gifEl.src = "";
+    gifEl.alt = "Sassy the Chinchilla";
+    gifEl.style.display = "none";
+  }
+
+  // Set ARIA for clarity
+  selector.setAttribute("aria-activedescendant", day);
+}
+
