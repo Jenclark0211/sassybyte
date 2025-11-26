@@ -1,7 +1,9 @@
 
+
 :root {
   --back:#0b1e3f;
-  --accent:#ff2bd6;
+ 
+  --accent: #ff2bd6;
   --neon: #6a00ff;
   --glow: #c7e3ff;
   --text: #ffffff;
@@ -18,22 +20,34 @@ html {
   font-size:18px;
   font-family: "PT Sans", sans-serif;
   font-weight: 700;
-  
-  
-  
+    
 }
 body {
-  margin: 0;
-  min-height: 100vh;
-  background: radial-gradient(1200px circle at 20% 0%, #0f1b33 0%, #0a1324 50%, #050a17 100%);
-  color: var(--glow);
-  font-family: 'Courier Prime', monospace;
+  background-color:var(--back);
+  color: var(--text);
+  text-align:center;
 }
+a {
+  color:var(--glow);
+  text-decoration:none;
+}
+a:hover, 
+a:focus {
+  color:var(--accent);
+  
+}
+a:active {
+  color:var(--neon);
+  background-color:var(--glow);
+  
+}
+
+
 #container {
   display:flex;
   flex-direction:column;
   flex-wrap:nowrap;
-  justify-content:space-around;
+  justify-content:center;
   align-items:center;
   margin: 6px 10px 8px 0;
   color: var(--glow);
@@ -122,7 +136,7 @@ body {
   opacity: 0.9;
 }
 
-/*Styles and fonts*/
+/*Styles/fonts*/
   .unkempt-regular {
   font-family: "Unkempt", cursive;
   font-weight: 400;
