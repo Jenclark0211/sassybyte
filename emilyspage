@@ -1,0 +1,419 @@
+layout: page
+title: "emilyspage"
+permalink: /https://www.sassybyte.dev/emilyspage
+
+Blame
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Emily Page</title>
+    <link rel="stylesheet" data href="styles.css"> 
+    <style>/*color scheme*/
+:root {
+  --darkback:rgba(222, 6, 191, 1);
+  --backcolor:black;
+  --textcolor:#fc9cff;
+  --accentcolor:#274357;
+  --boxcolor: 11px 11px 10px -6px
+   rgba(39, 67, 87, 1),
+10px 10px 23px -7px rgba(222, 6, 191, 1);
+}
+*, ::before, ::after {
+  box-sizing:border-box;
+  padding:0;
+  margin:0;
+
+}
+
+html {
+  font-family:"Zen Dots", sans-serif;
+  font-size:16px;
+}
+body {
+  background-color:var(--backcolor);
+  color:var(--textcolor);
+}
+/*font*/
+.zen-dots-regular {
+  font-family: "Zen Dots", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+/* nav bar */
+#header {
+  background-color:var(--backcolor;)
+  width:100%;
+  height:auto;
+  margin:auto;
+  border:20px solid var(--accentcolor);
+}
+h1 {
+  font-size:40px;
+  text-align:center; 
+}
+#navbar  {
+  margin-top:20px;
+  text-decoration:none;
+  list-style:none;
+  display:flex;
+  flex-direction:row;
+  flex-wrap:wrap;
+  justify-content:space-evenly;
+  gap:15px;
+}
+#navbar a {
+  color:var(--backcolor);
+  text-decoration:none;
+}
+#navbar a:hover {
+  color:var(accentcolor);
+  background-color:var(--accentcolor);
+}
+/* The dropdown container */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: var(--textcolor);
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+ background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover, .dropbtn {
+  background-color:var--(darkback);
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--textcolor);
+  color:var(--textcolor);
+  min-width: 160px;
+  box-shadow:var(--boxcolor);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color:var(--textcolor);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color:var(--accentcolor);
+  color:var(--textcolor);
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+  color:var(--textcolor);
+    overflow:scroll;
+
+}
+
+#header {
+background-color:var(--backcolor);
+  width:100%;
+  height:auto;
+  margin:auto;
+  border:20px solid var(--accentcolor);
+}
+h1 {
+  font-size:40px;
+  text-align:center; 
+}
+#flex-container {
+  display: flex;
+  flex-direction:column;
+  flex-wrap:nowrap;
+  justify-content:center;
+  gap:10px;
+}
+/*chin picture*/
+#fieldofchins img {
+   box-shadow:var(--boxcolor);
+}
+/*video carousel*/
+.carousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  margin: auto;
+  box-shadow:var(--boxcolor);
+}
+
+.video-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.video-slide {
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.video-slide iframe {
+  width: 100%;
+  height: 60vh;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+/* Navigation arrows */
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 50%;
+}
+
+.nav.prev { left: 10px; }
+.nav.next { right: 10px; }
+
+/* Dots */
+.dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 0.5rem;
+}
+
+.dots button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: none;
+  background: #bbb;
+  cursor: pointer;
+}
+
+.dots button.active {
+  background: hotpink;
+}
+.chinphotos {
+  width:100%;
+  height:auto;
+  box-shadow:var(--boxcolor);
+}
+.gallery {
+  positon: relative;
+  width:90%;
+  max-width:300px;
+}
+
+
+
+
+
+}
+/*styles for screens larger than 768px */
+@media screen and (min-width:768px) {
+  body {
+   
+    display: grid;
+  	grid-template-rows: 20vh 1fr;
+  	grid-template-columns: 20vw 1fr;
+  	gap: 0px 5px;
+  	width: 100%;
+	  height: 100%;
+  }
+  
+  #header {
+   grid-area: 1/2/2/3;
+
+  }
+  #flex-container {
+    grid-area: 2 / 2 / 3 / 3;
+
+    
+  }
+  #navbar {
+    text-align:left;
+    grid-area: 1 / 1 / 3 / 2;
+    border:3px solid var(--textcolor);
+  }
+  #navbar {
+    display:flex;
+    flex-direction:column;
+    justify-content:space-evenly;
+    gap:76px;
+    flex-wrap:nowrap;
+  }
+  #fieldofchins img {
+   max-width:75%;
+   margin-left:10%;
+
+
+  }
+
+}
+</style>
+</head>
+<body>
+  <div id="header">
+    <h1>The Emily Page!</h1>
+  </div>
+
+  <div id ="navbar">
+    <div class="dropdown">
+        <button class="dropbtn">My Favs ▼</button>
+        <div class="dropdown-content">
+          <a href="https://youtube.com">YouTube</a>
+          <a href="https://www.gmail.com">My Email</a>      
+          <a href="#">My Photos</a>
+          <a href="https://www.bing.com/ck/a?!&&p=9447d02fa1730478e0bc84ac5e887215a42a94953b39d0c642296b20936bc7b3JmltdHM9MTc2MjEyODAwMA&ptn=3&ver=2&hsh=4&fclid=319dfd67-0978-6e21-0e01-ebf208076f68&psq=kids+online+free+coloring+books&u=a1aHR0cHM6Ly93d3cuY29sb3Jpbmdib29rLmFpL29ubGluZS1jb2xvcmluZw">Ai Coloring Book</a>
+        </div>
+    </div>
+    <div class="dropdown">
+        <button class="dropbtn">Learning ▼</button>
+        <div class="dropdown-content">
+          <a href="https://www.mathnook.com/math/grade-levels/2.php">Math Games</a>
+          <a href="https://kids.nationalgeographic.com/">National Geographic Kids</a>
+          <a href="https://www.timeforkids.com/g56/">Time magazine for KIDS</a>
+          <a href="https://www.photoworkout.com/photography-lessons-for-kids/#the-fundamentals">Kids guide to Photography</a>
+          <a href="https://freekidsbooks.org/">Free Books Online</a>
+          <a href="https://newsforkids.net/">News for Kids</a>
+          <a href="https://kids.guinnessworldrecords.com/records/young-achievers">Kids Guinness World Records</a>
+          <a href="https://www.education.com/resources/games/?msclkid=19b332f6b972161ab94b5bffb5d40f3e&utm_campaign=Search%20-%20Games%20-%20BMM&utm_content=Children%27s%20Games&utm_medium=cpc&utm_source=bing&utm_term=+children%27s%20+learning%20+games" >Edcuational Games</a>
+          <a href="https://www.crayola.com/">Crayola Website</a>
+          <a href="https://www.switchzoo.com/">Switch Zoo Animal Games</a>
+          <a href="https://www.funology.com/">Funology</a>
+          <a href="https://www.typingclub.com/">Typing lessons</a>
+          <a href="https://www.wikihow.com/Start-a-Business-(for-Kids)">How to start a business for kids</a>
+          <a href="https://code.org/en-US/hour-of-code/helloworld ">Kids Coding</a>
+          <a href="https://kids.wordsmyth.net/we/">Kids Wordsmyth</a>
+          <a href="https://www.bing.com/ck/a?!&&p=962d58d582bb7d92ea9d840cad34a4a2ba6cdc070a8b054fbce3ed32886b2163JmltdHM9MTc2MjEyODAwMA&ptn=3&ver=2&hsh=4&fclid=319dfd67-0978-6e21-0e01-ebf208076f68&psq=kids+enclyopedia&u=a1aHR0cHM6Ly9raWRzLmJyaXRhbm5pY2EuY29tLw">Britannica Kids</a>
+          <a href=" https://jewelnexis.com/articles/jewelry-making-comprehensive-guide/">Jewerly Making 101</a>
+          <a href="https://thatkidscraftsite.com/">Kids Crafsites</a>
+          <a href="https://www.samsung.com/us/support/downloads/?model=N0055227&modelCode=SM-S901ULVEVZW">How to Guide for Samsung Galaxy S22</a>
+          <a href="https://www.engineerkids.org/">Engineering for Kids</a>
+          <a href="https://www.ducksters.com/science/chemistry/">Chemistry for Kids</a>
+          <a href="https://www.ducksters.com/history/">History for Kids</a>
+          </div>
+       </div>
+          <div class="dropdown">
+        <button class="dropbtn">Games ▼</button>
+        <div class="dropdown-content">
+          <a href="https://blocklygames.com/">Coding Games</a>
+          <a href="https://www.msn.com/en-us/play">Microsoft Games</a>
+          <a href="https://www.ducksters.com/games/">Duckster's Learning Games</a>
+          <a href="https://www.yahoo.com/games/">Yahoo Kids Games</a> 
+          <a href="https://dresstoimpressgame.com/">Dress to Imoress</a>:
+        </div>
+      </div>
+    </div>
+       
+    <div id="flex-container">
+       <div id ="fieldofchins">
+         <img class ="chinphotos" src ="https://live.staticflickr.com/65535/54872148709_fa26b0553f_m.jpg" alt="image of chinchillas" >
+        </div>
+        <div id="calculator>
+          <iframe height="500" style="width: 100%;" scrolling="no" title="Neon Calculator" src="https://codepen.io/Jenclark0211/embed/WbwOdzP?default-tab=result&theme-id=dark" frameborder="no" loading="lazy" allowtransparency="true">
+          </iframe>
+        </div>
+        <div class="carousel">
+          <button class="nav prev">‹</button>
+          <div class="video-track">
+            <div class="video-slide">
+              <iframe src="https://www.youtube.com/embed/5QIQ5QHqDbw" 
+                title="Video 1" frameborder="0" allowfullscreen >
+              </iframe>
+            </div>
+            <div class="video-slide">
+              <iframe src="https://www.youtube.com/embed/983bBbJx0Mk" 
+                title="Video 2" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="video-slide">
+              <iframe src="https://www.youtube.com/embed/l8Dr7vzMSVE" 
+              title="Video 3" frameborder="0" allowfullscreen>
+              </iframe>
+            </div>
+          </div>
+          <button class="nav next">›</button>
+          <div class="dots">
+          </div>
+        </div>
+     <div id="flashcards">
+      <iframe height="600" style="width: 100%;" scrolling="no" title="Neon Calculator" src="https://codepen.io/Jenclark0211/embed/WbwOdzP?default-tab=&theme-id=dark" frameborder="no" loading="lazy" allowtransparency="true">
+      
+      </iframe>
+    </div>
+    <div id="emilyborder">
+      <img src="https://live.staticflickr.com/65535/54872149849_854d7b0e82_h.jpg" alt="header with                chinchilla" class="chinphotos">
+    </div>
+    <div id="newflexcontainer">
+      <div id="game">
+        <iframe src="https://plugplay.games/embed/aae25d4cf623e6da948e59855238b6a4053e5846" width="49%" height="450" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div id="neoncalc">
+        <iframe height="300" style="width: 49%;" scrolling="no" title="Neon Calculator" src="https://codepen.io/Jenclark0211/embed/WbwOdzP?default-tab=&theme-id=dark" frameborder="no" loading="lazy" allowtransparency="true">
+        </iframe>
+      </div>
+    </div>
+ </div>
+ <script src="script.js">const track = document.querySelector('.video-track');
+const slides = Array.from(document.querySelectorAll('.video-slide'));
+const prevBtn = document.querySelector('.prev');
+const nextBtn = document.querySelector('.next');
+const dotsContainer = document.querySelector('.dots');
+
+let index = 0;
+
+// Create dots
+slides.forEach((_, i) => {
+  const dot = document.createElement('button');
+  if (i === 0) dot.classList.add('active');
+  dot.addEventListener('click', () => goToSlide(i));
+  dotsContainer.appendChild(dot);
+});
+
+const dots = dotsContainer.querySelectorAll('button');
+
+function updateCarousel() {
+  track.style.transform = `translateX(-${index * 100}%)`;
+  dots.forEach(dot => dot.classList.remove('active'));
+  dots[index].classList.add('active');
+}
+
+function goToSlide(i) {
+  index = i;
+  updateCarousel();
+}
+
+nextBtn.addEventListener('click', () => {
+  index = (index + 1) % slides.length;
+  updateCarousel();
+});
+
+prevBtn.addEventListener('click', () => {
+  index = (index - 1 + slides.length) % slides.length;
+  updateCarousel();
+});</script>
+</body>
+</html>
+ 
